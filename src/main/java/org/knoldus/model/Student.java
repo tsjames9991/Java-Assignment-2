@@ -23,9 +23,7 @@ public class Student {
     private Optional<List<String>> subjects;
 
     /**
-     * @param studentName      : Name of the student
-     * @param enrollmentNumber : roll number of the student
-     * @param providedSubjects : list of subjects can also be null
+     * Default constructor of the class Student
      */
     Student(final String studentName, final int enrollmentNumber,
             final Optional<List<String>> providedSubjects) {
@@ -35,28 +33,28 @@ public class Student {
     }
 
     /**
-     * @return : get List of subjects
+     * Get List of subjects
      */
     public final List<String> getSubjects() {
         return this.subjects.orElseGet(ArrayList::new);
     }
 
     /**
-     * @return : get Name
+     * Get Name
      */
     public final String getName() {
         return this.name;
     }
 
     /**
-     * @return : get rollNumber
+     * Get rollNumber
      */
     public final int getRollNumber() {
         return this.rollNumber;
     }
 
     /**
-     * @return : true if there are subjects present
+     * Get if there are subjects present
      */
     public final boolean hasSubjects() {
         return this.subjects.isPresent();

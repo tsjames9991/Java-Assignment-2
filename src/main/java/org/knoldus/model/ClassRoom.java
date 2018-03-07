@@ -8,8 +8,6 @@ import java.util.stream.Stream;
 
 /**
  * ClassRoom: Class representation of a class room.
- * consist of room number and list of students entering
- * that class room
  */
 public class ClassRoom {
 
@@ -23,8 +21,7 @@ public class ClassRoom {
     private Optional<List<Student>> studentList;
 
     /**
-     * @param roomNumber          : Room number, can only be int
-     * @param externalStudentList : List of students belonging to that room
+     Constructor to the class ClassRoom
      */
     ClassRoom(final int roomNumber,
               final Optional<List<Student>> externalStudentList) {
@@ -34,15 +31,13 @@ public class ClassRoom {
 
     /**
      * returns the room number.
-     *
-     * @return : room number of the class.
      */
     public final int getRoomId() {
         return this.roomId;
     }
 
     /**
-     * @return : returns true if students are present.
+     * Returns true if students are present.
      */
     public final boolean hasStudents() {
         return this.studentList.isPresent();
@@ -50,15 +45,13 @@ public class ClassRoom {
 
     /**
      * getter for student list.
-     *
-     * @return : List<Student> is returned.
      */
     private List<Student> getStudentList() {
         return this.studentList.orElseGet(ArrayList::new);
     }
 
     /**
-     * @return : returns list of students with no subjects
+     * Returns list of students with no subjects
      */
     public final Stream<Student> getStudentsWithNoSubjects() {
         if (this.studentList.isPresent()) {
@@ -72,8 +65,6 @@ public class ClassRoom {
 
     /**
      * Return a greeting message, if students are available.
-     *
-     * @return : Empty , if there are no students in the room
      */
     public final String greetStudents() {
         if (this.studentList.isPresent()) {
@@ -84,7 +75,7 @@ public class ClassRoom {
     }
 
     /**
-     * @return : returns the subjects taught in this room
+     * Returns the subjects taught in this room
      */
     public final Stream<String> getStudentsSubject() {
         return (
