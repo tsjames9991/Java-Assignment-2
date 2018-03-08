@@ -1,10 +1,13 @@
 package org.knoldus.model;
 
-import org.junit.*;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import java.util.*;
-
-import static org.junit.Assert.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Test suite for class Student.
@@ -12,12 +15,24 @@ import static org.junit.Assert.*;
 
 public class StudentTester {
     /**
-     * Constant Values For Initialization
+     * Constant Values For Initialization.
      */
     private static final int ONE = 1;
+    /**
+     * Constant Values For Initialization.
+     */
     private static final int TWO = 2;
+    /**
+     * Constant Values For Initialization.
+     */
     private static Student genius;
+    /**
+     * Constant Values For Initialization.
+     */
     private static Student misfit;
+    /**
+     * Constant Values For Initialization.
+     */
     private static List<String> subjectsBackEnd;
 
     @BeforeClass
@@ -86,5 +101,4 @@ public class StudentTester {
         assertEquals("Student doesn't have any subject",
                 misfit.hasSubjects(), false);
     }
-
 }

@@ -68,7 +68,7 @@ public class Analysis {
     }
 
     /**
-     * @return : Return average tweets per day by LFC.
+     * @return : Return average tweets per day by Bruce Schneier.
      */
     public CompletableFuture<Double> findAverageTweetsPerDay() {
         return supplyAsync(

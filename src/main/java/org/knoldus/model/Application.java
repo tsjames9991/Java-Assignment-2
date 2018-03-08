@@ -13,8 +13,17 @@ final class Application {
      * Constant Values For Initialization
      */
     private static final int ONE = 1;
+    /**
+     * Constant Values For Initialization
+     */
     private static final int TWO = 2;
+    /**
+     * Constant Values For Initialization
+     */
     private static final int THREE = 3;
+    /**
+     * Constant Values For Initialization
+     */
     private static final int FOUR = 4;
 
     /**

@@ -21,7 +21,7 @@ public class ClassRoom {
     private Optional<List<Student>> studentList;
 
     /**
-     Constructor to the class ClassRoom
+     Constructor to the class ClassRoom.
      */
     ClassRoom(final int roomNumber,
               final Optional<List<Student>> externalStudentList) {
@@ -31,6 +31,7 @@ public class ClassRoom {
 
     /**
      * returns the room number.
+     * @return Something
      */
     public final int getRoomId() {
         return this.roomId;
@@ -38,6 +39,7 @@ public class ClassRoom {
 
     /**
      * Returns true if students are present.
+     * @return Something
      */
     public final boolean hasStudents() {
         return this.studentList.isPresent();
@@ -45,13 +47,15 @@ public class ClassRoom {
 
     /**
      * getter for student list.
+     * @return Something
      */
     private List<Student> getStudentList() {
         return this.studentList.orElseGet(ArrayList::new);
     }
 
     /**
-     * Returns list of students with no subjects
+     * Returns list of students with no subjects.
+     * @return Something
      */
     public final Stream<Student> getStudentsWithNoSubjects() {
         if (this.studentList.isPresent()) {
@@ -65,6 +69,7 @@ public class ClassRoom {
 
     /**
      * Return a greeting message, if students are available.
+     * @return Something
      */
     public final String greetStudents() {
         if (this.studentList.isPresent()) {
@@ -75,7 +80,8 @@ public class ClassRoom {
     }
 
     /**
-     * Returns the subjects taught in this room
+     * Returns the subjects taught in this room.
+     * @return Something
      */
     public final Stream<String> getStudentsSubject() {
         return (

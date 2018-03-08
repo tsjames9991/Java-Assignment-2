@@ -41,6 +41,7 @@ public class Student {
 
     /**
      * Get Name
+     * @return Something
      */
     public final String getName() {
         return this.name;
@@ -48,6 +49,7 @@ public class Student {
 
     /**
      * Get rollNumber
+     * @return Something
      */
     public final int getRollNumber() {
         return this.rollNumber;
@@ -55,6 +57,7 @@ public class Student {
 
     /**
      * Get if there are subjects present
+     * @return Something
      */
     public final boolean hasSubjects() {
         return this.subjects.isPresent();

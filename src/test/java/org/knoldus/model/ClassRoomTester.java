@@ -1,9 +1,14 @@
 package org.knoldus.model;
 
-import org.junit.*;
-import java.util.*;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Test suite for testing ClassRoom class.
@@ -11,16 +16,33 @@ import static org.junit.Assert.*;
 
 public class ClassRoomTester {
     /**
-     * Constant Values For Initialization
+     * Constant Values For Initialization.
      */
     private static final int ONE = 1;
+    /**
+     * Constant Values For Initialization.
+     */
     private static final int TWO = 2;
+    /**
+     * Constant Values For Initialization.
+     */
     private static final int THREE = 3;
+    /**
+     * Constant Values For Initialization.
+     */
     private static final int FOUR = 4;
+    /**
+     * Constant Values For Initialization.
+     */
     private static ClassRoom classRoom;
+    /**
+     * Constant Values For Initialization.
+     */
     private static ClassRoom commonRoom;
+    /**
+     * Constant Values For Initialization.
+     */
     private static List<Student> students;
-
 
     @BeforeClass
     public static void setUp() {
@@ -77,7 +99,8 @@ public class ClassRoomTester {
         Stream<Student> expectedResult =
                 students.stream().filter(student -> !student.hasSubjects());
         assertArrayEquals("Room 1 has Only one student with no subjects",
-                classRoom.getStudentsWithNoSubjects().toArray(), expectedResult.toArray());
+                classRoom.getStudentsWithNoSubjects().toArray(),
+                expectedResult.toArray());
     }
 
     /**
@@ -86,7 +109,8 @@ public class ClassRoomTester {
     @Test
     public final void testGetStudentsWithNoSubjectForStore() {
         assertArrayEquals("Store Room has no students",
-                commonRoom.getStudentsWithNoSubjects().toArray(), new Student[]{});
+                commonRoom.getStudentsWithNoSubjects().toArray(),
+                new Student[]{});
     }
 
     /**
