@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  * Test suite for class Student.
  */
 
-public class StudentTester {
+public class StudentTest {
     /**
      * Constant Values For Initialization.
      */
