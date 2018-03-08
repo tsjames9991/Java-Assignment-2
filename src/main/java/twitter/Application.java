@@ -1,4 +1,4 @@
-package org.knoldus.twitter;
+package twitter;
 
 import twitter4j.Status;
 import java.util.List;
@@ -37,7 +37,7 @@ public final class Application {
         Thread.sleep(5000);
         tweetsCount.thenAccept(count -> System.out.println("Total tweets: " + count));
 
-        System.out.println("\nFinding average tweets by @LFC: ");
+        System.out.println("\nFinding average tweets by Bruce Schneier: ");
         Thread.sleep(5000);
         averageTweets.thenAccept(count -> System.out.println("Average tweets: " + count));
 

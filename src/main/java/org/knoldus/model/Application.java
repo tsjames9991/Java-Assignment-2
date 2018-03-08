@@ -26,6 +26,7 @@ final class Application {
 
     /**
      * Entry point.
+     * @param args : console time argument are specified here.
      */
     public static void main(final String[] args) {
 

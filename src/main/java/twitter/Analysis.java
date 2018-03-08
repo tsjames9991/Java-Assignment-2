@@ -1,4 +1,4 @@
-package org.knoldus.twitter;
+package twitter;
 
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;

@@ -1,4 +1,4 @@
-package org.knoldus.twitter;
+package twitter;
 
 /**
  * Configuration File For Twitter
